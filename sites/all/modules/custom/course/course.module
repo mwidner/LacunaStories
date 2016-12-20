@@ -170,35 +170,7 @@ function course_admin_form() {
   $form = array();
 
   $form['info'] = array(
-    '#markup' => 'To set up a new course, visit <a href="/group-setup">' . $base_url . '/group-setup</a>'
-  );
-  $form['authorization'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Authorization'),
-    '#collapsible' => FALSE,
-    '#collapsed' => FALSE,
-  );
-
-  $form['authorization']['course_require_auth'] = array(
-    '#type' => 'radios',
-    '#title' => t('Require Code to Create Courses?'),
-    '#description' => t('Select "Yes" to require instructors to have the authorization code before creating a course.'),
-    '#default_value' => variable_get('course_require_auth', TRUE),
-    '#options' => array(TRUE => 'Yes', FALSE => 'No'),
-    '#required' => TRUE,
-  );
-
-  $form['authorization']['course_authcode'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Authorization Code'),
-    '#description' => t('Set the authorization code needed to create a Lacuna course.'),
-    '#default_value' => variable_get('course_authcode', 'ChangeMe!'),
-    '#required' => FALSE,
-    '#states' => array(
-      'visible' => array(
-        ':input[name="course_require_auth"]' => array('value' => 1)
-      )
-    )
+    '#markup' => 'To set up a new group, visit <a href="/group-setup">' . $base_url . '/group-setup</a>'
   );
 
   $form['taxonomies'] = array(
@@ -206,7 +178,7 @@ function course_admin_form() {
     '#title' => t('Default Taxonomies'),
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
-    '#description' => t('Set the default values that all new courses will receive. Separate each item by commas. Instructors will have a chance to change these when setting up their course.')
+    '#description' => t('Set the default values that all new reading groups will receive. Separate each item by commas. Admins will have a chance to change these when setting up their reading group.')
   );
 
   $form['taxonomies']['course_default_units'] = array(
