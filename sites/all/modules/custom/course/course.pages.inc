@@ -5,7 +5,7 @@
  */
 function course_create_authorize() {
   if (!variable_get('course_require_auth')) {
-    drupal_goto('course-setup/add-course');
+    drupal_goto('group-setup/add-group');
   }
   $output = "Thanks for your interest in setting up a Lacuna course. Currently, your institution requires a code to do so.If you have already been approved to create a course, please enter the Course Setup Code given to you. Contact your institution's Lacuna administrator if you need a code.";
 
@@ -16,7 +16,7 @@ function course_create_authorize() {
 function course_authcode_form($form, &$form_state) {
   $form['authcode'] = array(
     '#type' => 'textfield',
-    '#title' => 'Course Setup Code',
+    '#title' => 'Group Setup Code',
     '#size' => 10,
     '#required' => TRUE
   );
@@ -42,11 +42,11 @@ function course_authcode_form_submit($form, &$form_state) {
     cache_set($key, $token, 'cache', $expiration); // our copy
 
     drupal_set_message("Your Course Setup Code was recognized. Please contact your institution's Lacuna administrator if you have any issues creating your course.");
-    drupal_goto('course-setup/add-course');
+    drupal_goto('group-setup/add-group');
   }
   else {
     drupal_set_message("Unfortunately, we do not recognize your Course Setup Code. Please try again or contact your institution's Lacuna adminstrator.", 'warning');
-    drupal_goto('course-setup');
+    drupal_goto('group-setup');
   }
 }
 
@@ -149,7 +149,7 @@ function course_organize() {
 			'current_course' => course_get_selected_course()
 		)), 'setting');
 	course_add_default_terms();
-  $output = "You can now continue by naming the units and genres by which you would like to organize course materials. A few defaults have been chosen for you already. You may remove these by clicking on the trash icon (<span class='fa fa-trash-o'></span>). To continue, click \"Continue\"<br />";
+  $output = "You can now continue by naming the units and genres by which you would like to organize group materials. A few defaults have been chosen for you already. You may remove these by clicking on the trash icon (<span class='fa fa-trash-o'></span>). To continue, click \"Continue\"<br />";
   $output .= "<br />";
 	$form = drupal_get_form('course_organize_form');
   $output .= drupal_render($form);
@@ -173,7 +173,7 @@ function course_organize_form($form, &$form_state) {
   // Current Units terms for this course, if any
   $form['units'] = array(
     '#type' => 'fieldset',
-    '#title' => 'Create units by which your course will be organized.',
+    '#title' => 'Create units by which your group will be organized.',
 		'#attributes' => array(
 			'id' => 'units'
 		)
@@ -188,7 +188,7 @@ function course_organize_form($form, &$form_state) {
 	// Current Genre terms for this courajax-se, if any
 	$form['genre_doc'] = array(
 		'#type' => 'fieldset',
-		'#title' => 'Create genres to categorize course readings.',
+		'#title' => 'Create genres to categorize readings.',
 		'#attributes' => array(
 			'id' => 'genre_doc',
 		),
@@ -203,7 +203,7 @@ function course_organize_form($form, &$form_state) {
 	// Current Response genre terms for this course, if any
 	$form['genre_response'] = array(
 		'#type' => 'fieldset',
-		'#title' => 'Create genres to categorize student responses.',
+		'#title' => 'Create genres to categorize responses.',
 		'#attributes' => array(
 			'id' => 'genre_response',
 		),
@@ -234,7 +234,7 @@ function course_organize_form($form, &$form_state) {
 function course_organize_form_submit($form, &$form_state) {
 	// Don't need to do anything else; taxonomies handled in previous step
 	// TODO: Skip taxonomy submission
-  drupal_goto("course-setup/add-materials");
+  drupal_goto("group-setup/add-materials");
 }
 
 /*

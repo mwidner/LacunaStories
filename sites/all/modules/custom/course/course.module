@@ -17,23 +17,23 @@ define("COURSE_CURRENT_CACHE_ID", 'course_current_cache');
  */
 function course_menu() {
   $items = array();
-  $items['course-setup'] = array(
-    'title' => 'Create a New Course',
+  $items['group-setup'] = array(
+    'title' => 'Create a New Reading Group',
     'description' => 'Course creation process',
     'page callback' => 'course_create_authorize',
     'access callback' => 'course_setup_access',
     'type' => MENU_NORMAL_ITEM,
     'file' => 'course.pages.inc',
   );
-  $items['course-setup/add-course'] = array(
-    'title' => 'Create Your New Course',
-    'description' => 'Add a new course',
+  $items['group-setup/add-group'] = array(
+    'title' => 'Create Your New Reading Group',
+    'description' => 'Add a new reading group',
     'page callback' => 'course_create',
     'access callback' => 'course_setup_access',
     'type' => MENU_NORMAL_ITEM,
     'file' => 'course.pages.inc',
   );
-  $items['course-setup/organize'] = array(
+  $items['group-setup/organize'] = array(
     'title' => 'Organize Materials',
     'description' => 'Organize course.',
     'page callback' => 'course_organize',
@@ -41,7 +41,7 @@ function course_menu() {
     'type' => MENU_NORMAL_ITEM,
     'file' => 'course.pages.inc',
   );
-  $items['course-setup/add-materials'] = array(
+  $items['group-setup/add-materials'] = array(
     'title' => 'Add Material',
     'description' => 'Add course material.',
     'page callback' => 'course_add_material',
@@ -63,8 +63,8 @@ function course_menu() {
     'type' => MENU_CALLBACK,
     'file' => 'course.pages.inc',
   );
-  $items['admin/config/content/lacuna-courses'] = array(
-    'title' => 'Course Creation Settings',
+  $items['admin/config/content/lacuna-groups'] = array(
+    'title' => 'Reading Group Creation Settings',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('course_admin_form'),
     'access arguments' => array('administer site configuration'),
@@ -78,8 +78,8 @@ function course_menu() {
     'file' => 'course.pages.inc',
   );
   // "About This Course" callback. Link is defined separately in the feature.
-  $items['about-course'] = array(
-    'title' => 'About This Course',
+  $items['about-group'] = array(
+    'title' => 'About This Reading Group',
     'page callback' => 'course_about_course',
     'access arguments' => array('access content'),
     'type' => MENU_NORMAL_ITEM,
@@ -132,7 +132,7 @@ function course_setup_access() {
   }
 
   // Allow instructors to add materials to an existing course w/o course auth code
-  $allowed_paths = array('course-setup/organize', 'course-setup/add-materials');
+  $allowed_paths = array('group-setup/organize', 'group-setup/add-materials');
   $gid = course_get_selected_course();
   if ($canCreate && !empty($gid) && in_array(current_path(), $allowed_paths)) {
     return TRUE;
@@ -141,7 +141,7 @@ function course_setup_access() {
   // ANON
   if (user_is_anonymous()) {
     drupal_set_message("You must be logged in to create a Lacuna course.", 'status', FALSE);
-    drupal_goto('user/login', array('query' => array('destination' => 'course-setup')));
+    drupal_goto('user/login', array('query' => array('destination' => 'group-setup')));
   }
   // NO PERMS
   elseif (!$canCreate) {
@@ -155,13 +155,13 @@ function course_setup_access() {
   // NO/MISMATCHED AUTHCODE
   else {
     drupal_set_message("Please type in the Authorization Code before creating a Lacuna course.", 'warning', FALSE);
-    drupal_goto('course-setup');
+    drupal_goto('group-setup');
   }
 }
 
 function course_is_protected_page() {
   $current_path = current_path();
-  return (preg_match("/course-setup/", $current_path) && $current_path != 'course-setup');
+  return (preg_match("/group-setup/", $current_path) && $current_path != 'group-setup');
 }
 
 function course_admin_form() {
@@ -170,7 +170,7 @@ function course_admin_form() {
   $form = array();
 
   $form['info'] = array(
-    '#markup' => 'To set up a new course, visit <a href="/course-setup">' . $base_url . '/course-setup</a>'
+    '#markup' => 'To set up a new course, visit <a href="/group-setup">' . $base_url . '/group-setup</a>'
   );
   $form['authorization'] = array(
     '#type' => 'fieldset',
@@ -595,24 +595,6 @@ function course_set_selected_course($gid, $uid = NULL, $access_check = TRUE) {
   return TRUE;
 }
 
-/*
- * Implements hook_node_validate
- */
-function course_node_validate($node, $form, &$form_state) {
-  if ($node->type == 'course') {
-    // Ensure that multi-term courses are in consecutive terms
-    $terms = $form_state['values']['field_course_term'][$node->language];
-    if (count($terms) == 2) {
-      $term1 = $terms[0]['value'];
-      $term2 = $terms[1]['value'];
-      if (($term1 == 'Fall' && $term2 == 'Spring') OR ($term1 = 'Winter' && $term2 == 'Summer')) {
-        form_set_error('field_course_term', t('Multi-term courses must be in consecutive terms.'));
-        // Todo: get this to highlight the term field in the failed form submission. Not sure what's up.
-      }
-    }
-  }
-}
-
 
 /**
  * @param $form
@@ -838,13 +820,13 @@ function course_save_course_continue_setup($course) {
     $nid = $course_wrapper->nid->value();
     if (!empty($nid)) {
       course_set_selected_course($nid);
-      drupal_goto("course-setup/organize");
+      drupal_goto("group-setup/organize");
     }
   }
   catch (Exception $e) {
     watchdog_exception('course_create_form_submit', $e, NULL, NULL, WATCHDOG_ERROR);
     drupal_set_message(t("There was an error creating your course.  Please try again and/or contact your institution's Lacuna administrator for assistance."), 'error');
-    drupal_goto("course-setup/add-course");
+    drupal_goto("group-setup/add-group");
   }
 }
 
@@ -994,7 +976,7 @@ function course_add_document_form_submit($form, &$form_state) {
 	$node->field_doc_genre[LANGUAGE_NONE][0]['tid'] = $form_state['values']['genre_doc'];
   node_save($node);
 
-	$message = "You have successfully added material to your course. To make the item available for annotation, remember to change the status to 'Ready for Annotation'. You can access all your course materials under <a href=\"" . $base_url . "/course-setup/add-materials\">Manage->Add Materials</a>";
+	$message = "You have successfully added material to your course. To make the item available for annotation, remember to change the status to 'Ready for Annotation'. You can access all your course materials under <a href=\"" . $base_url . "/group-setup/add-materials\">Manage->Add Materials</a>";
 
   if ("Save (Finished Adding Material)" == $form_state['values']['op']) {
     drupal_set_message($message);
@@ -1004,7 +986,7 @@ function course_add_document_form_submit($form, &$form_state) {
   else if ("Save (Add More Material)" == $form_state['values']['op']) {
     drupal_set_message($message);
     unset($_GET['destination']);
-    drupal_goto("course-setup/add-materials");
+    drupal_goto("group-setup/add-materials");
   }
 }
 
