@@ -55,6 +55,7 @@ function lacuna_stories_media_field_default_field_instances() {
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -112,6 +113,7 @@ function lacuna_stories_media_field_default_field_instances() {
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
     ),
     'widget' => array(
       'active' => 1,

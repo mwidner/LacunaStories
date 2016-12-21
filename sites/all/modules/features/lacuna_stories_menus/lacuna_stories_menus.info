@@ -1,8 +1,8 @@
 name = Menus
-description = Superfish menus for Lacuna Stories
+description = Superfish menus
 core = 7.x
-package = Lacuna Stories
-version = 7.x-2.0-3
+package = Rhizomatic
+version = 7.x-2.2
 project = lacuna_stories_menus
 dependencies[] = ctools
 dependencies[] = features

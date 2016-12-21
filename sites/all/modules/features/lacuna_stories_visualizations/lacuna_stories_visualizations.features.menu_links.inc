@@ -10,7 +10,7 @@
 function lacuna_stories_visualizations_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_annotations-dashboard:visualization/dashboard
+  // Exported menu link: main-menu_annotations-dashboard:visualization/dashboard.
   $menu_links['main-menu_annotations-dashboard:visualization/dashboard'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'visualization/dashboard',
@@ -31,7 +31,7 @@ function lacuna_stories_visualizations_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_reflect:<nolink>',
   );
-  // Exported menu link: main-menu_responses-map:visualization/responses
+  // Exported menu link: main-menu_responses-map:visualization/responses.
   $menu_links['main-menu_responses-map:visualization/responses'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'visualization/responses',
@@ -44,7 +44,7 @@ function lacuna_stories_visualizations_menu_default_menu_links() {
       'identifier' => 'main-menu_responses-map:visualization/responses',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
