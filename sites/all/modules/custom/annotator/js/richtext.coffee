@@ -76,4 +76,8 @@ class Annotator.Plugin.RichText extends Annotator.Plugin
         annotation.text = annotation.text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
         # Match the correct text to the correct div by index
         divList[index].innerHTML = annotation.text
+        # Check that the embedded content isn't cut off, if so, move the Annotator Viewer
+        rect = divList[index].getBoundingClientRect()
+        if rect.top < 0
+          Viewer.element[0].style.top = rect.height + "px"
 

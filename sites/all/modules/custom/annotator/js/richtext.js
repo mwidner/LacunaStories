@@ -75,7 +75,7 @@
     };
 
     RichText.prototype.convertText = function(Viewer) {
-      var annotation, divList, index, ref, results;
+      var annotation, divList, index, rect, ref, results;
       divList = $(Viewer.element[0]).find('span.annotator-controls, span.annotator-touch-controls').next();
       ref = Viewer.annotations;
       results = [];
@@ -83,7 +83,13 @@
         annotation = ref[index];
         if (annotation.text != null) {
           annotation.text = annotation.text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
-          results.push(divList[index].innerHTML = annotation.text);
+          divList[index].innerHTML = annotation.text;
+          rect = divList[index].getBoundingClientRect();
+          if (rect.top < 0) {
+            results.push(Viewer.element[0].style.top = rect.height + "px");
+          } else {
+            results.push(void 0);
+          }
         } else {
           results.push(void 0);
         }
