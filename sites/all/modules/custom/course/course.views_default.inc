@@ -208,7 +208,7 @@ function course_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Content: Course Image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_course_image']['id'] = 'field_course_image';
   $handler->display->display_options['fields']['field_course_image']['table'] = 'field_data_field_course_image';
   $handler->display->display_options['fields']['field_course_image']['field'] = 'field_course_image';
@@ -232,15 +232,14 @@ function course_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Term */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_course_term']['id'] = 'field_course_term';
   $handler->display->display_options['fields']['field_course_term']['table'] = 'field_data_field_course_term';
   $handler->display->display_options['fields']['field_course_term']['field'] = 'field_course_term';
   $handler->display->display_options['fields']['field_course_term']['label'] = '';
   $handler->display->display_options['fields']['field_course_term']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_course_term']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_course_term']['delta_offset'] = '0';
-  /* Field: Content: Year */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_course_year']['id'] = 'field_course_year';
   $handler->display->display_options['fields']['field_course_year']['table'] = 'field_data_field_course_year';
   $handler->display->display_options['fields']['field_course_year']['field'] = 'field_course_year';
@@ -248,13 +247,13 @@ function course_views_default_views() {
   $handler->display->display_options['fields']['field_course_year']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_course_year']['alter']['text'] = '[field_course_term], [field_course_year]';
   $handler->display->display_options['fields']['field_course_year']['element_label_colon'] = FALSE;
-  /* Field: Content: Course ID */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_course_id']['id'] = 'field_course_id';
   $handler->display->display_options['fields']['field_course_id']['table'] = 'field_data_field_course_id';
   $handler->display->display_options['fields']['field_course_id']['field'] = 'field_course_id';
   $handler->display->display_options['fields']['field_course_id']['label'] = '';
   $handler->display->display_options['fields']['field_course_id']['element_label_colon'] = FALSE;
-  /* Field: Content: Instructor Name: */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_name']['id'] = 'field_name';
   $handler->display->display_options['fields']['field_name']['table'] = 'field_data_field_name';
   $handler->display->display_options['fields']['field_name']['field'] = 'field_name';
@@ -287,7 +286,7 @@ function course_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Year (field_course_year) */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['field_course_year_value']['id'] = 'field_course_year_value';
   $handler->display->display_options['arguments']['field_course_year_value']['table'] = 'field_data_field_course_year';
   $handler->display->display_options['arguments']['field_course_year_value']['field'] = 'field_course_year_value';
@@ -296,8 +295,7 @@ function course_views_default_views() {
   $handler->display->display_options['arguments']['field_course_year_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_course_year_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_course_year_value']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_course_year_value']['limit'] = '0';
-  /* Contextual filter: Content: Term (field_course_term) */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['field_course_term_value']['id'] = 'field_course_term_value';
   $handler->display->display_options['arguments']['field_course_term_value']['table'] = 'field_data_field_course_term';
   $handler->display->display_options['arguments']['field_course_term_value']['field'] = 'field_course_term_value';
@@ -306,7 +304,6 @@ function course_views_default_views() {
   $handler->display->display_options['arguments']['field_course_term_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_course_term_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_course_term_value']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_course_term_value']['limit'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

@@ -65,9 +65,9 @@ function course_image_default_styles() {
 function course_node_info() {
   $items = array(
     'course' => array(
-      'name' => t('Course'),
+      'name' => t('Reading Group'),
       'base' => 'node_content',
-      'description' => t('A specific course, used to give a group of enrolled students access to materials.'),
+      'description' => t('A specific reading group, used to give a group of enrolled users access to materials.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

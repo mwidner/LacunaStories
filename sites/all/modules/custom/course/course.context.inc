@@ -11,7 +11,7 @@ function course_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'course_context';
   $context->description = '';
@@ -78,7 +78,7 @@ return FALSE;',
   $export['course_context'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'frontpage';
   $context->description = '';
@@ -124,7 +124,7 @@ return FALSE;',
   $export['frontpage'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'institutional_context';
   $context->description = '';
