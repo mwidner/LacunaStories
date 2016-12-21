@@ -1,0 +1,6 @@
+/* line 2, ../../sass/components/menus.scss */
+ul.menu a, ul.menu span {
+  border: none;
+  background-color: white;
+  text-decoration: none;
+}

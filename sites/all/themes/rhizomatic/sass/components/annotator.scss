@@ -1,0 +1,789 @@
+/*	Annotator CSS styles – migrated from annotator/css  */
+@import "init";
+
+.annotator-viewer div {
+    border: none;
+    padding: 0px 0px 6px;                       
+}
+
+.annotator-viewer blockquote.twitter-tweet {
+  border: 1px solid blue;
+}
+
+// Spacing for our icons: Categories and Privacy
+.annotator-item.fa:before,
+.annotator-item .fa:before {
+    // padding-left: 5px;
+    padding-right: 5px;
+}
+
+.annotator-item.fa:before {
+float: left;
+width: 10px;
+padding-left: 2px;
+}
+
+.annotator-category, .annotator-privacy-type {
+  padding: 1px 5px 1px 5px;
+  // margin: 1px 1px 0px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  display: inline-block;
+  text-transform: capitalize;
+  font-style: normal;
+  float:left;
+  margin-right:1px;
+}
+
+  /* ----------------------------------------------------------------
+  *	Categories styles
+  *	from annotator/css/categories.css
+  *
+  *
+  */
+
+$category-default: rgba(22,147,165, .2);
+$category-selected: rgba(22,147,165, .8);
+
+.annotator-categories {
+  border-top: solid 1px #eee;
+  margin-bottom: 2px;           // ih (8/16) 
+}
+
+  .annotator-categories h4{
+    font-size: 13px;
+    display: block;
+    margin: 5px 0px 5px 5px;
+  }
+
+  .annotator-viewer ul li .annotator-category {
+    text-align: center;
+    // width: 33%;
+    font-size:10px;
+    width: 70px;
+    padding: 4px 15px;
+    margin-bottom: 9px;
+    margin-right: 3px;
+  }
+
+.annotator-category {
+  background-color: $category-default;
+}
+
+  .annotator-category-none {
+
+  }
+
+.annotator-category-0,
+.annotator-category-1,
+.annotator-category-2,
+.annotator-category-3,
+.annotator-category-4,
+.annotator-category-5,
+.annotator-category-6,
+.annotator-category-7
+{
+  background-color: $category-default;
+}
+
+.annotator-category-selected {
+  background-color: $category-selected !important;
+}
+
+
+  /* ----------------------------------------------------------------
+  *	Comment styles
+  *	from annotator/css/comment.css
+  */
+
+  .annotator-reply {
+    display: block !important;
+    width: 100%;
+  }
+
+
+  /* ----------------------------------------------------------------
+  *	Filters styles
+  *	from annotator/css/filters.css
+  */
+
+  #annotation-filters-wrapper {
+    position: fixed;
+    font-size: 12px;
+    // border: 1px solid rgb(200, 200, 200);
+    // moz-border-radius: 5px;
+    // webkit-border-radius: 5px;
+    // border-radius: 5px;
+    // padding: 2px;
+    border: 1px solid #b4b4b4;
+    moz-border-radius: 3px;
+    webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px;
+    width: 15em;
+    // background-color: #ff0000;
+    // box-shadow: 2px 2px 5px gray;
+    background-color: #eee;
+    box-shadow: 0px 0px 5px #b1b1b1;
+    top: 200px;
+    z-index: 1;
+  }
+  #annotation-filters-wrapper h2 {
+    width: 9em !important;
+  }
+
+#annotation-filters {
+    position: relative;
+}
+
+section.region-sidebar-second h2 {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-size: 20px;
+    letter-spacing: .4px;                           // ih (8/16): editing the title of annotation filters
+
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+section.region-sidebar-second input[type="checkbox"] {
+    // margin: 8% 5% 8% 15%;
+    margin: 15px 6px 0px 50px;
+}
+section.region-sidebar-second input[type="checkbox"]:nth-of-type(2) {
+  margin:0px 6px 15px 50px;
+  }
+
+#af-active {
+    text-align: center;
+}
+
+.region-sidebar-second div#block-block-1 {
+    background-color: transparent;
+    border: none;
+}
+
+.af-title {
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.af-button, .annotator-reply-button {                // ih (8/16): changes made to button design
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    padding: 0px;
+    margin: 0px 6px 15px 6px;
+    text-align: center;
+    font-variant: small-caps;
+    // text-transform: uppercase;
+    width: 25%;
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    // border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    // background-color: #92a6c4;
+    // background-image: linear-gradient(to bottom, #92a6c4, #39404a);
+    background-image: linear-gradient(to top, #939dab, #b0b7c1); 
+    color: #FFFFFF;
+    // text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
+    // border-radius: 4px 4px 4px 4px;
+    border-radius: 2px;
+    // border-style: solid;
+    border-width: 1px;
+    // box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+    font-size: 13px;
+    margin-right: 5px;
+    letter-spacing: .5px;
+}
+
+.af-button:hover {
+    // background-color: #39404a;
+    background-color: #939dab;
+    background-position: 0 -15px;
+    transition: background-color ease-in 0s;
+}
+
+.af-button-active:hover {
+    background-color: #83a220; // #88b551;
+    color: #FFFFFF;
+    background-position: 0 15px;
+    text-decoration: none;
+    transition: background-color ease-in 0s;
+}
+
+.af-button-active {
+    // background-color: #c4df2c;
+    // background-image: linear-gradient(to bottom, #c4df2c, #88b551);
+    background-color: #a5cc29; // #98ca5b;
+    background-image: linear-gradient(to top, #a5cc29, #83a220);// #98ca5b, #88b551);
+}
+
+.af-button-reset:hover,
+.af-button-reset:focus {
+    background-color: #5d6476;
+    color: #FFFFFF;
+    background-position: 0 -15px;
+    display: block;
+    width: 90%;
+        margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color ease-in 0s;
+}
+
+.af-button-reset:active {
+    background-color: #525868;
+    // color: #FFFFFF;
+    background-position: 0 -20px;
+    /*
+    display: block;
+    width: 90%;
+        margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto; */
+    transition: background-color ease-in 0s;
+}
+
+.af-button-reset {
+    width: 90%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #5d6476;
+    background-image: linear-gradient(to bottom, #747c92, #5d6476);
+}
+
+.af-annotation-hide {
+    background-color: transparent !important;
+}
+
+.af-button-user {
+  margin-left: 7.5px;
+  margin-right:7.5px;
+}
+
+// For the "Showing Only" title
+#af-filter-active {
+  font-size: 20px;
+  font-variant: small-caps;
+  letter-spacing: .4px;
+  text-transform: lowercase;                // ih (8/16)
+
+  // font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 8px
+}
+
+// For dynamic active filters
+.af-filter-active {
+    display: block;
+    text-transform: capitalize;
+    width: 100%;
+    padding-left: 10%;
+    cursor: pointer;
+    padding-bottom: 10px;                  // ih (8/16)
+    font-family: $base-font-family;
+    font-size: 12px;
+
+    &::before {
+      font: normal normal normal 11px/1 FontAwesome;          // and then overrides the font for the icon by referencing directly the element prior to the annotator privacy type font (ih, 07/12)
+    }
+}
+
+.af-wrapper {
+    white-space: nowrap;
+    width: 100%;
+    background-color: #eee;
+}
+
+label.af-autocomplete-label {
+    display: inline-block !important;
+    text-align: right;
+    width: 35%;
+    padding-right: 5px;
+    font-weight: normal;
+    font-size: 9pt;
+    letter-spacing: .2px;
+}
+
+label.af-autocomplete-label:first-letter {
+    text-transform: capitalize;
+}
+
+input.af-autocomplete.ui-autocomplete-input {
+    display: inline-block;
+    // width: 60%;
+    width: 55%;
+}
+
+#af-pager-wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#af-pager-controls {
+    padding-left: 20px;
+    width: 100%;
+}
+
+#af-pager-count {
+  text-align: center;
+  margin-left: 40%;
+  font-size: 11px;
+}
+
+i.af-pager {
+    cursor: pointer;
+    margin-right: 20%;
+}
+
+
+/***
+ * Annotator Privacy Plugin CSS.
+ *
+ ***/
+
+$privacy-default: rgba(17,143,5,0.33);
+$privacy-selected: rgba(19, 149, 25, 0.74);
+.annotator-privacy-types {
+  padding: 0px !important;
+  font-size: 12px !important;
+  margin-left: 2px;
+}
+
+.annotator-editor .annotator-privacy-types {
+  margin-left: 4px;
+
+  //  Peer-Groups disabled style
+  #Peer-Groups.peer-groups-disabled {
+    background-color: rgba(50,50,50,0.33);
+  }
+
+}
+
+.annotator-editor {
+  .annotator-category:hover,
+  .annotator-privacy:hover {
+    cursor: pointer;
+  }
+  .annotator-controls {
+    a {
+      text-decoration: none;
+      text-align: center;
+      padding: 0px 10px 0px 10px;
+      color: black;
+    }
+    a.annotator-focus, a:hover {
+      color: white;
+    }
+  }
+}
+
+.annotator-viewer {
+  .annotator-privacy-type {
+    // padding: 6px;
+    font-size: 10px;
+    padding: 4px 15px;
+    margin-bottom: 6px;
+    // margin-bottom:2px;
+    // width:75px;
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    font-family: $helvetica; // $base-font-family;                // as with the author widget, this sets the font-family of the text to sans-serif (ih, 07/12)
+    &::before {
+      font: normal normal normal 8.5px/1 FontAwesome;          // and then overrides the font for the icon by referencing directly the element prior to the annotator privacy type font (ih, 07/12)
+      padding-left: 0px;
+    }
+  }
+  .annotator-privacy-types {
+    margin-left: 0px;
+  }
+  .annotator-privacy {
+    padding: 0;
+    margin-bottom: -1em;
+  }
+  .annotator-privacy-groups {
+    padding-bottom: 0;
+  }
+  .annotator-privacy-group.checked {
+    padding: 1px 0 1px 40%;
+    // margin: 1px 1px 0px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .annotator-privacy-group.peer-groups.checked {
+    background-color: $privacy-selected;
+  }
+  .annotator-privacy-group.course-groups.checked {
+    background-color: $privacy-default;
+  }
+  .annotator-reply {
+    clear: left;
+    // margin-top: 12px;
+    span:first-of-type {                       // this edits the format of "# Replies"
+        margin-right: 10px !important;
+        display: inline-block;
+    }
+    > span {                                   // this edits the format of # Replies
+      padding: 10px 10px 10px 0px;
+    }
+    span {
+      cursor: pointer;
+    }
+
+    span:hover {
+      color: black;
+    }
+    > ol.annotator-reply-list {
+      // Only the first list item should be scrollable this way
+      overflow: auto;
+      max-height: 200px;
+    }
+    
+    ol.annotator-reply-list {
+      padding: 0px;
+      margin-left: 15px;
+    }
+    li.annotator-reply-replyarea {
+      list-style: none;
+      font-size: 10px;
+      color: #1a1a1a;
+      .annotator-reply-text p {
+        margin: 4px 2px 0px;
+        border-left: 1px solid black;
+        padding-left: 6px;
+        padding-bottom: 6px;
+      }
+    }
+
+    .annotator-reply-author {
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .annotator-reply-date {
+      font-size: 9.5px;
+      color: #a5a5a5;
+    }
+
+    div.annotator-reply-controls {
+      padding: 0px 0px 0px 10px !important;
+      border-left: 1px solid black;
+      margin: -1px 0px 4px 2px;
+    }
+
+    div:nth-child(2)::before{                               // accesses reply icon
+      font: normal normal normal 9px/1 FontAwesome;
+    }
+
+    span.fa.fa-reply {
+      font-family: $helvetica;
+      font-size: 13px;
+
+      &:before {
+        font: normal normal normal 9px/1 FontAwesome;
+      }
+    }
+  }
+}
+
+.annotator-reply-form {
+  position: absolute;
+  display: block;
+  background: rgba(250,250,250, .9);
+  overflow: auto;
+  z-index: 1000;
+  padding: 10px;
+  border: 1px solid black;
+  width: 30%;
+  
+  @media (max-width: 540px) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .annotator-reply-text {
+    height: 50px;
+  }
+
+  .annotator-reply-button, .annotator-reply-button:hover, .annotator-reply-button.annotator-reply-save, .annotator-reply-button.annotator-reply-save:hover {
+    margin: 5px 5px 0px 5px;
+    float: right;
+    font-size: 14px;
+    text-transform: lowercase;
+  }
+  
+  .annotator-reply-button:hover {
+    color:#FFFFFF;
+    background-color: #939dab;
+    background-position: 0 -20px;
+    transition: background-color ease-in 0s;
+  }
+
+  .annotator-reply-button.annotator-reply-save:hover {
+    background-color: #83a220; // #88b551;
+    color: #FFFFFF;
+    background-position: 0 -20px;
+    text-decoration: none;
+    transition: background-color ease-in 0s;
+  }
+
+  .annotator-reply-button.annotator-reply-save {
+    background-color: #83a220; // #98ca5b;
+    background-image: linear-gradient(to bottom, #a5cc29, #83a220);// #98ca5b, #88b551);
+  }
+}
+
+.annotator-privacy-types .annotator-privacy-type {
+  background-color: $privacy-default;
+}
+
+.annotator-privacy-types .annotator-privacy-type.checked {
+  background-color: $privacy-selected;
+}
+
+.annotator-privacy-type.annotator-privacy-peer-groups {
+  width: 40%;                 // 45%;                 // ih(8/16)
+}
+
+.annotator-privacy-everyone {
+  background-color: $privacy-default !important;
+}
+
+.annotator-privacy-private {
+  background-color: rgba(255, 0, 51, .2) !important;
+}
+
+form.annotator-widget .annotator-privacy-groups {
+  display: none;
+}
+form.annotator-widget .annotator-privacy-groups.show-groups {
+  display: block;
+  margin-left: 15px;
+  color: black;
+  padding: 0px;
+}
+label.annotator-privacy-group {
+  width: 95%;
+  margin-left: 5%;
+  display: inline-block;
+}
+
+/* ----------------------------------------------------------------
+*	Rich Text Annotator styles
+*	from annotator/css/richText-annotator.css
+*/
+
+.annotator-viewer div:first-of-type.richText-annotation *,
+.annotator-viewer div:first-of-type.richText-annotation{
+  font-style: normal;
+  font-weight: inherit;
+  text-align: inherit;
+}
+.annotator-viewer div:first-of-type.richText-annotation{
+  padding-top: 22px;
+}
+
+// ih (8/16): my add, which overrides whatever is causing padding top & bottom to be 12px (can't find where it is in here...)
+.annotator-viewer div:first-of-type {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+/* Fix in the tinymce */
+.annotator-viewer div:first-of-type.richText-annotation strong{
+  font-weight: bold;
+}
+.annotator-viewer div:first-of-type.richText-annotation em{
+  font-style: italic;
+}
+
+
+/* Some change in the design of Annotator */
+.annotator-editor .annotator-widget {
+  min-width: 300px;
+}
+
+//  Updated to select only the viewer, by CML on 11/2/16.
+.annotator-viewer .annotator-widget {
+  padding: 0 10px;
+}
+
+/* Fix to show icons */
+.annotator-editor a:after {
+  content: none;
+}
+
+.annotator-tags-item {
+  font-size: smaller;
+}
+
+/* ----------------------------------------------------------------
+*	Rich Text styles
+*	from annotator/css/richtext.css
+*/
+
+/* Fix to show icons */
+.annotator-editor a:after {
+  content: none;
+}
+
+//.annotator-selection-handle::after {
+//  background-image: url(../images/handle.png);
+//}
+
+
+.annotator-editor .annotator-widget .annotator-listing .annotator-item {
+  line-height: 2.5em;
+  color: #1588ba;
+}
+
+
+//  Added to prevent the privacy group buttons from wrapping in WebKit, by CML on 11/2/16.
+.annotator-editor .annotator-privacy {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.annotator-notice,
+.annotator-filter *,
+.annotator-widget * {
+  /*font-family: inherit !important;*/
+  font-style: normal;
+  color: #3c3c3c;                                     // slightly lighter than black (ih 08/15)
+  font-size: 13px;                                    // unified font size (ih 08/15)
+
+  a {
+    text-decoration: underline;
+    color: $category-selected;
+  }
+}
+
+/***
+ *
+ * Next rule overrides the "style='display: none'"
+ * that gets added *inline* to our annotator-checkbox element
+ * by some well-hidden piece of code that I've not been able to track down
+ *
+ * Mike Widner <mikewidner@stanford.edu>
+ *
+ ***/
+li.annotator-checkbox[style] {
+  display: block !important;
+}
+
+
+/* ----------------------------------------------------------------
+*	Tags styles
+*	from annotator/css/tags.css
+*/
+
+.ui-autocomplete-category {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: small;
+  max-height: 200px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+.annotator-tags-item {
+  font-size: smaller;
+}
+
+/* 
+#annotation-filters-wrapper {
+  background-color: #eee;
+  box-shadow: 2px 2px 5px gray;
+}
+*/
+
+
+/* Annotation histogram styles */
+.annotation-histogram-bar {
+  opacity: .5;
+  stroke: #1693A5;
+  stroke-opacity: .5;
+  stroke-width: 1;
+}
+
+/* For vertical alignment */
+#annotation-histogram-wrapper {
+  margin-left: 1em;
+  svg {
+    position: relative;
+  }
+}
+
+/* For Author plugin */
+.annotator-author {
+  display: block;
+  font-family: $helvetica !important; // this changes the annotator author font from $base-font-family to the same font-family as all other text elements (ih, 07/12)
+  font-size: 12px;                             // slightly decreases author font-size
+  &::before {                           // this directly references the icon prior to the annotator author, overrides the annotator-author font settings and sets the font to FontAwesome; otherwise, the entire line is changed to sans-serif font (ih, 07/12)
+      font: normal normal normal 9px/1 FontAwesome;   // copied from inspect element; is there a variable name for the icon font settings?
+      padding-right: 4px;
+      padding-left: 0px;
+  }
+}
+
+/* For CKEditor plugin */
+.annotator-editor .cke {
+  z-index: 10000 !important;
+}
+
+/* ----------------------------------------------------------------
+* Loading styles
+*/
+
+#annotations-loading {
+
+  float: right;
+  margin-right: 20px;
+  padding: 5px;
+  position: relative;
+  height: 20px;
+  top: -15px;
+  background-color: #ffa;
+
+  i {
+    position: relative;
+    top: -4px;
+    left: 3px;
+  }
+
+  span {
+    position: relative;
+    top: -4px;
+    left: 6px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+}

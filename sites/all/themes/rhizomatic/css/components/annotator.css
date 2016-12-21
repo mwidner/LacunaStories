@@ -1,0 +1,810 @@
+@charset "ISO-8859-1";
+/*	Annotator CSS styles – migrated from annotator/css  */
+/* line 4, ../../sass/components/annotator.scss */
+.annotator-viewer div {
+  border: none;
+  padding: 0px 0px 6px;
+}
+
+/* line 9, ../../sass/components/annotator.scss */
+.annotator-viewer blockquote.twitter-tweet {
+  border: 1px solid blue;
+}
+
+/* line 15, ../../sass/components/annotator.scss */
+.annotator-item.fa:before,
+.annotator-item .fa:before {
+  padding-right: 5px;
+}
+
+/* line 20, ../../sass/components/annotator.scss */
+.annotator-item.fa:before {
+  float: left;
+  width: 10px;
+  padding-left: 2px;
+}
+
+/* line 26, ../../sass/components/annotator.scss */
+.annotator-category, .annotator-privacy-type {
+  padding: 1px 5px 1px 5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  display: inline-block;
+  text-transform: capitalize;
+  font-style: normal;
+  float: left;
+  margin-right: 1px;
+}
+
+/* ----------------------------------------------------------------
+*	Categories styles
+*	from annotator/css/categories.css
+*
+*
+*/
+/* line 50, ../../sass/components/annotator.scss */
+.annotator-categories {
+  border-top: solid 1px #eee;
+  margin-bottom: 2px;
+}
+
+/* line 55, ../../sass/components/annotator.scss */
+.annotator-categories h4 {
+  font-size: 13px;
+  display: block;
+  margin: 5px 0px 5px 5px;
+}
+
+/* line 61, ../../sass/components/annotator.scss */
+.annotator-viewer ul li .annotator-category {
+  text-align: center;
+  font-size: 10px;
+  width: 70px;
+  padding: 4px 15px;
+  margin-bottom: 9px;
+  margin-right: 3px;
+}
+
+/* line 71, ../../sass/components/annotator.scss */
+.annotator-category {
+  background-color: rgba(22, 147, 165, 0.2);
+}
+
+/* line 87, ../../sass/components/annotator.scss */
+.annotator-category-0,
+.annotator-category-1,
+.annotator-category-2,
+.annotator-category-3,
+.annotator-category-4,
+.annotator-category-5,
+.annotator-category-6,
+.annotator-category-7 {
+  background-color: rgba(22, 147, 165, 0.2);
+}
+
+/* line 91, ../../sass/components/annotator.scss */
+.annotator-category-selected {
+  background-color: rgba(22, 147, 165, 0.8) !important;
+}
+
+/* ----------------------------------------------------------------
+*	Comment styles
+*	from annotator/css/comment.css
+*/
+/* line 101, ../../sass/components/annotator.scss */
+.annotator-reply {
+  display: block !important;
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------
+*	Filters styles
+*	from annotator/css/filters.css
+*/
+/* line 112, ../../sass/components/annotator.scss */
+#annotation-filters-wrapper {
+  position: fixed;
+  font-size: 12px;
+  border: 1px solid #b4b4b4;
+  moz-border-radius: 3px;
+  webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 4px;
+  width: 15em;
+  background-color: #eee;
+  box-shadow: 0px 0px 5px #b1b1b1;
+  top: 200px;
+  z-index: 1;
+}
+
+/* line 133, ../../sass/components/annotator.scss */
+#annotation-filters-wrapper h2 {
+  width: 9em !important;
+}
+
+/* line 137, ../../sass/components/annotator.scss */
+#annotation-filters {
+  position: relative;
+}
+
+/* line 141, ../../sass/components/annotator.scss */
+section.region-sidebar-second h2 {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 20px;
+  letter-spacing: .4px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 152, ../../sass/components/annotator.scss */
+section.region-sidebar-second input[type="checkbox"] {
+  margin: 15px 6px 0px 50px;
+}
+
+/* line 156, ../../sass/components/annotator.scss */
+section.region-sidebar-second input[type="checkbox"]:nth-of-type(2) {
+  margin: 0px 6px 15px 50px;
+}
+
+/* line 160, ../../sass/components/annotator.scss */
+#af-active {
+  text-align: center;
+}
+
+/* line 164, ../../sass/components/annotator.scss */
+.region-sidebar-second div#block-block-1 {
+  background-color: transparent;
+  border: none;
+}
+
+/* line 169, ../../sass/components/annotator.scss */
+.af-title {
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+/* line 174, ../../sass/components/annotator.scss */
+.af-button, .annotator-reply-button {
+  cursor: pointer;
+  display: inline-block;
+  color: black;
+  padding: 0px;
+  margin: 0px 6px 15px 6px;
+  text-align: center;
+  font-variant: small-caps;
+  width: 25%;
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to top, #939dab, #b0b7c1);
+  color: #FFFFFF;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-image: none;
+  border-radius: 2px;
+  border-width: 1px;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  font-size: 13px;
+  margin-right: 5px;
+  letter-spacing: .5px;
+}
+
+/* line 211, ../../sass/components/annotator.scss */
+.af-button:hover {
+  background-color: #939dab;
+  background-position: 0 -15px;
+  transition: background-color ease-in 0s;
+}
+
+/* line 218, ../../sass/components/annotator.scss */
+.af-button-active:hover {
+  background-color: #83a220;
+  color: #FFFFFF;
+  background-position: 0 15px;
+  text-decoration: none;
+  transition: background-color ease-in 0s;
+}
+
+/* line 226, ../../sass/components/annotator.scss */
+.af-button-active {
+  background-color: #a5cc29;
+  background-image: linear-gradient(to top, #a5cc29, #83a220);
+}
+
+/* line 234, ../../sass/components/annotator.scss */
+.af-button-reset:hover,
+.af-button-reset:focus {
+  background-color: #5d6476;
+  color: #FFFFFF;
+  background-position: 0 -15px;
+  display: block;
+  width: 90%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color ease-in 0s;
+}
+
+/* line 246, ../../sass/components/annotator.scss */
+.af-button-reset:active {
+  background-color: #525868;
+  background-position: 0 -20px;
+  /*
+  display: block;
+  width: 90%;
+      margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto; */
+  transition: background-color ease-in 0s;
+}
+
+/* line 259, ../../sass/components/annotator.scss */
+.af-button-reset {
+  width: 90%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #5d6476;
+  background-image: linear-gradient(to bottom, #747c92, #5d6476);
+}
+
+/* line 269, ../../sass/components/annotator.scss */
+.af-annotation-hide {
+  background-color: transparent !important;
+}
+
+/* line 273, ../../sass/components/annotator.scss */
+.af-button-user {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+/* line 279, ../../sass/components/annotator.scss */
+#af-filter-active {
+  font-size: 20px;
+  font-variant: small-caps;
+  letter-spacing: .4px;
+  text-transform: lowercase;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+/* line 292, ../../sass/components/annotator.scss */
+.af-filter-active {
+  display: block;
+  text-transform: capitalize;
+  width: 100%;
+  padding-left: 10%;
+  cursor: pointer;
+  padding-bottom: 10px;
+  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-size: 12px;
+}
+/* line 302, ../../sass/components/annotator.scss */
+.af-filter-active::before {
+  font: normal normal normal 11px/1 FontAwesome;
+}
+
+/* line 307, ../../sass/components/annotator.scss */
+.af-wrapper {
+  white-space: nowrap;
+  width: 100%;
+  background-color: #eee;
+}
+
+/* line 313, ../../sass/components/annotator.scss */
+label.af-autocomplete-label {
+  display: inline-block !important;
+  text-align: right;
+  width: 35%;
+  padding-right: 5px;
+  font-weight: normal;
+  font-size: 9pt;
+  letter-spacing: .2px;
+}
+
+/* line 323, ../../sass/components/annotator.scss */
+label.af-autocomplete-label:first-letter {
+  text-transform: capitalize;
+}
+
+/* line 327, ../../sass/components/annotator.scss */
+input.af-autocomplete.ui-autocomplete-input {
+  display: inline-block;
+  width: 55%;
+}
+
+/* line 333, ../../sass/components/annotator.scss */
+#af-pager-wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* line 340, ../../sass/components/annotator.scss */
+#af-pager-controls {
+  padding-left: 20px;
+  width: 100%;
+}
+
+/* line 345, ../../sass/components/annotator.scss */
+#af-pager-count {
+  text-align: center;
+  margin-left: 40%;
+  font-size: 11px;
+}
+
+/* line 351, ../../sass/components/annotator.scss */
+i.af-pager {
+  cursor: pointer;
+  margin-right: 20%;
+}
+
+/***
+ * Annotator Privacy Plugin CSS.
+ *
+ ***/
+/* line 364, ../../sass/components/annotator.scss */
+.annotator-privacy-types {
+  padding: 0px !important;
+  font-size: 12px !important;
+  margin-left: 2px;
+}
+
+/* line 370, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-privacy-types {
+  margin-left: 4px;
+}
+/* line 374, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-privacy-types #Peer-Groups.peer-groups-disabled {
+  background-color: rgba(50, 50, 50, 0.33);
+}
+
+/* line 382, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-category:hover,
+.annotator-editor .annotator-privacy:hover {
+  cursor: pointer;
+}
+/* line 386, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-controls a {
+  text-decoration: none;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  color: black;
+}
+/* line 392, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-controls a.annotator-focus, .annotator-editor .annotator-controls a:hover {
+  color: white;
+}
+
+/* line 399, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-type {
+  font-size: 10px;
+  padding: 4px 15px;
+  margin-bottom: 6px;
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+/* line 410, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-type::before {
+  font: normal normal normal 8.5px/1 FontAwesome;
+  padding-left: 0px;
+}
+/* line 415, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-types {
+  margin-left: 0px;
+}
+/* line 418, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy {
+  padding: 0;
+  margin-bottom: -1em;
+}
+/* line 422, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-groups {
+  padding-bottom: 0;
+}
+/* line 425, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-group.checked {
+  padding: 1px 0 1px 40%;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  display: inline-block;
+}
+/* line 433, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-group.peer-groups.checked {
+  background-color: rgba(19, 149, 25, 0.74);
+}
+/* line 436, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-privacy-group.course-groups.checked {
+  background-color: rgba(17, 143, 5, 0.33);
+}
+/* line 439, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply {
+  clear: left;
+}
+/* line 442, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply span:first-of-type {
+  margin-right: 10px !important;
+  display: inline-block;
+}
+/* line 446, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply > span {
+  padding: 10px 10px 10px 0px;
+}
+/* line 449, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply span {
+  cursor: pointer;
+}
+/* line 453, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply span:hover {
+  color: black;
+}
+/* line 456, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply > ol.annotator-reply-list {
+  overflow: auto;
+  max-height: 200px;
+}
+/* line 462, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply ol.annotator-reply-list {
+  padding: 0px;
+  margin-left: 15px;
+}
+/* line 466, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply li.annotator-reply-replyarea {
+  list-style: none;
+  font-size: 10px;
+  color: #1a1a1a;
+}
+/* line 470, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply li.annotator-reply-replyarea .annotator-reply-text p {
+  margin: 4px 2px 0px;
+  border-left: 1px solid black;
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+/* line 478, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply .annotator-reply-author {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 15px;
+  font-weight: 500;
+}
+/* line 485, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply .annotator-reply-date {
+  font-size: 9.5px;
+  color: #a5a5a5;
+}
+/* line 490, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply div.annotator-reply-controls {
+  padding: 0px 0px 0px 10px !important;
+  border-left: 1px solid black;
+  margin: -1px 0px 4px 2px;
+}
+/* line 496, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply div:nth-child(2)::before {
+  font: normal normal normal 9px/1 FontAwesome;
+}
+/* line 500, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply span.fa.fa-reply {
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-size: 13px;
+}
+/* line 504, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-reply span.fa.fa-reply:before {
+  font: normal normal normal 9px/1 FontAwesome;
+}
+
+/* line 511, ../../sass/components/annotator.scss */
+.annotator-reply-form {
+  position: absolute;
+  display: block;
+  background: rgba(250, 250, 250, 0.9);
+  overflow: auto;
+  z-index: 1000;
+  padding: 10px;
+  border: 1px solid black;
+  width: 30%;
+}
+@media (max-width: 540px) {
+  /* line 511, ../../sass/components/annotator.scss */
+  .annotator-reply-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+/* line 526, ../../sass/components/annotator.scss */
+.annotator-reply-form .annotator-reply-text {
+  height: 50px;
+}
+/* line 530, ../../sass/components/annotator.scss */
+.annotator-reply-form .annotator-reply-button, .annotator-reply-form .annotator-reply-button:hover, .annotator-reply-form .annotator-reply-button.annotator-reply-save, .annotator-reply-form .annotator-reply-button.annotator-reply-save:hover {
+  margin: 5px 5px 0px 5px;
+  float: right;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+/* line 537, ../../sass/components/annotator.scss */
+.annotator-reply-form .annotator-reply-button:hover {
+  color: #FFFFFF;
+  background-color: #939dab;
+  background-position: 0 -20px;
+  transition: background-color ease-in 0s;
+}
+/* line 544, ../../sass/components/annotator.scss */
+.annotator-reply-form .annotator-reply-button.annotator-reply-save:hover {
+  background-color: #83a220;
+  color: #FFFFFF;
+  background-position: 0 -20px;
+  text-decoration: none;
+  transition: background-color ease-in 0s;
+}
+/* line 552, ../../sass/components/annotator.scss */
+.annotator-reply-form .annotator-reply-button.annotator-reply-save {
+  background-color: #83a220;
+  background-image: linear-gradient(to bottom, #a5cc29, #83a220);
+}
+
+/* line 558, ../../sass/components/annotator.scss */
+.annotator-privacy-types .annotator-privacy-type {
+  background-color: rgba(17, 143, 5, 0.33);
+}
+
+/* line 562, ../../sass/components/annotator.scss */
+.annotator-privacy-types .annotator-privacy-type.checked {
+  background-color: rgba(19, 149, 25, 0.74);
+}
+
+/* line 566, ../../sass/components/annotator.scss */
+.annotator-privacy-type.annotator-privacy-peer-groups {
+  width: 40%;
+}
+
+/* line 570, ../../sass/components/annotator.scss */
+.annotator-privacy-everyone {
+  background-color: rgba(17, 143, 5, 0.33) !important;
+}
+
+/* line 574, ../../sass/components/annotator.scss */
+.annotator-privacy-private {
+  background-color: rgba(255, 0, 51, 0.2) !important;
+}
+
+/* line 578, ../../sass/components/annotator.scss */
+form.annotator-widget .annotator-privacy-groups {
+  display: none;
+}
+
+/* line 581, ../../sass/components/annotator.scss */
+form.annotator-widget .annotator-privacy-groups.show-groups {
+  display: block;
+  margin-left: 15px;
+  color: black;
+  padding: 0px;
+}
+
+/* line 587, ../../sass/components/annotator.scss */
+label.annotator-privacy-group {
+  width: 95%;
+  margin-left: 5%;
+  display: inline-block;
+}
+
+/* ----------------------------------------------------------------
+*	Rich Text Annotator styles
+*	from annotator/css/richText-annotator.css
+*/
+/* line 599, ../../sass/components/annotator.scss */
+.annotator-viewer div:first-of-type.richText-annotation *,
+.annotator-viewer div:first-of-type.richText-annotation {
+  font-style: normal;
+  font-weight: inherit;
+  text-align: inherit;
+}
+
+/* line 604, ../../sass/components/annotator.scss */
+.annotator-viewer div:first-of-type.richText-annotation {
+  padding-top: 22px;
+}
+
+/* line 609, ../../sass/components/annotator.scss */
+.annotator-viewer div:first-of-type {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+/* Fix in the tinymce */
+/* line 616, ../../sass/components/annotator.scss */
+.annotator-viewer div:first-of-type.richText-annotation strong {
+  font-weight: bold;
+}
+
+/* line 619, ../../sass/components/annotator.scss */
+.annotator-viewer div:first-of-type.richText-annotation em {
+  font-style: italic;
+}
+
+/* Some change in the design of Annotator */
+/* line 625, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-widget {
+  min-width: 300px;
+}
+
+/* line 630, ../../sass/components/annotator.scss */
+.annotator-viewer .annotator-widget {
+  padding: 0 10px;
+}
+
+/* Fix to show icons */
+/* line 635, ../../sass/components/annotator.scss */
+.annotator-editor a:after {
+  content: none;
+}
+
+/* line 639, ../../sass/components/annotator.scss */
+.annotator-tags-item {
+  font-size: smaller;
+}
+
+/* ----------------------------------------------------------------
+*	Rich Text styles
+*	from annotator/css/richtext.css
+*/
+/* Fix to show icons */
+/* line 649, ../../sass/components/annotator.scss */
+.annotator-editor a:after {
+  content: none;
+}
+
+/* line 658, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-widget .annotator-listing .annotator-item {
+  line-height: 2.5em;
+  color: #1588ba;
+}
+
+/* line 665, ../../sass/components/annotator.scss */
+.annotator-editor .annotator-privacy {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 672, ../../sass/components/annotator.scss */
+.annotator-notice,
+.annotator-filter *,
+.annotator-widget * {
+  /*font-family: inherit !important;*/
+  font-style: normal;
+  color: #3c3c3c;
+  font-size: 13px;
+}
+/* line 678, ../../sass/components/annotator.scss */
+.annotator-notice a,
+.annotator-filter * a,
+.annotator-widget * a {
+  text-decoration: underline;
+  color: rgba(22, 147, 165, 0.8);
+}
+
+/***
+ *
+ * Next rule overrides the "style='display: none'"
+ * that gets added *inline* to our annotator-checkbox element
+ * by some well-hidden piece of code that I've not been able to track down
+ *
+ * Mike Widner <mikewidner@stanford.edu>
+ *
+ ***/
+/* line 693, ../../sass/components/annotator.scss */
+li.annotator-checkbox[style] {
+  display: block !important;
+}
+
+/* ----------------------------------------------------------------
+*	Tags styles
+*	from annotator/css/tags.css
+*/
+/* line 703, ../../sass/components/annotator.scss */
+.ui-autocomplete-category {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: small;
+  max-height: 200px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+/* line 716, ../../sass/components/annotator.scss */
+.annotator-tags-item {
+  font-size: smaller;
+}
+
+/* 
+#annotation-filters-wrapper {
+  background-color: #eee;
+  box-shadow: 2px 2px 5px gray;
+}
+*/
+/* Annotation histogram styles */
+/* line 729, ../../sass/components/annotator.scss */
+.annotation-histogram-bar {
+  opacity: .5;
+  stroke: #1693A5;
+  stroke-opacity: .5;
+  stroke-width: 1;
+}
+
+/* For vertical alignment */
+/* line 737, ../../sass/components/annotator.scss */
+#annotation-histogram-wrapper {
+  margin-left: 1em;
+}
+/* line 739, ../../sass/components/annotator.scss */
+#annotation-histogram-wrapper svg {
+  position: relative;
+}
+
+/* For Author plugin */
+/* line 745, ../../sass/components/annotator.scss */
+.annotator-author {
+  display: block;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif !important;
+  font-size: 12px;
+}
+/* line 749, ../../sass/components/annotator.scss */
+.annotator-author::before {
+  font: normal normal normal 9px/1 FontAwesome;
+  padding-right: 4px;
+  padding-left: 0px;
+}
+
+/* For CKEditor plugin */
+/* line 757, ../../sass/components/annotator.scss */
+.annotator-editor .cke {
+  z-index: 10000 !important;
+}
+
+/* ----------------------------------------------------------------
+* Loading styles
+*/
+/* line 765, ../../sass/components/annotator.scss */
+#annotations-loading {
+  float: right;
+  margin-right: 20px;
+  padding: 5px;
+  position: relative;
+  height: 20px;
+  top: -15px;
+  background-color: #ffa;
+}
+/* line 775, ../../sass/components/annotator.scss */
+#annotations-loading i {
+  position: relative;
+  top: -4px;
+  left: 3px;
+}
+/* line 781, ../../sass/components/annotator.scss */
+#annotations-loading span {
+  position: relative;
+  top: -4px;
+  left: 6px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
