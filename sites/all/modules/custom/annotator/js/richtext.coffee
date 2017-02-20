@@ -37,7 +37,7 @@ class Annotator.Plugin.RichText extends Annotator.Plugin
           { name: 'insert', items: ['embed, autoembed'] },
         ],
       # removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor',
-      removePlugins: 'elementspath,font,resize',
+      # removePlugins: 'elementspath,font,resize',
       allowedContent: true,
       autoUpdateElement: true,
     }
@@ -46,7 +46,7 @@ class Annotator.Plugin.RichText extends Annotator.Plugin
     # Configuration -> Content Authoring -> Annotator -> Richtext.
     key = Drupal.settings.annotator_richtext.iframely_api_key
     if (key?.length)
-      base = '//iframe.ly/api/oembed?url={url}&callback={callback}&api_key=';
+      base = '//iframe.ly/api/oembed?iframe=1&omit_script=1&url={url}&callback={callback}&api_key=';
       config.embed_provider = base + key
 
     CKEDITOR.replace(editor_instance, config)
@@ -60,6 +60,7 @@ class Annotator.Plugin.RichText extends Annotator.Plugin
     # Grab the user-created text, put it in the correct annotator field
     CKEDITOR.instances[editor_instance].updateElement()
     annotation.text = CKEDITOR.instances[editor_instance].getData()
+    annotation.text = annotation.text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
 
   # load existing annotation text into the wysiwyg for updating
   updateText: (Editor, annotation) =>
@@ -74,10 +75,13 @@ class Annotator.Plugin.RichText extends Annotator.Plugin
       # possibly dangerous, but trusting WYSIWYG input filters for content
       if annotation.text?
         annotation.text = annotation.text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+
         # Match the correct text to the correct div by index
         divList[index].innerHTML = annotation.text
         # Check that the embedded content isn't cut off, if so, move the Annotator Viewer
         rect = divList[index].getBoundingClientRect()
         if rect.top < 0
           Viewer.element[0].style.top = rect.height + "px"
+        if rect.left < 0
+          Viewer.element[0].style.left = "0px"
 
