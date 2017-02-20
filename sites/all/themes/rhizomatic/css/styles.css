@@ -3161,6 +3161,24 @@ h1 {
   color: #009fda;
 }
 
+/* line 14, ../sass/components/base.scss */
+div#name-and-slogan {
+  margin-top: 1.5em;
+}
+/* line 16, ../sass/components/base.scss */
+div#name-and-slogan a {
+  border: .5em solid #fff;
+  background-color: white;
+  text-decoration: none;
+  padding: .3em .5em;
+}
+/* line 22, ../sass/components/base.scss */
+div#name-and-slogan a:hover {
+  color: #d10074;
+  background: #f9e300;
+  border: .5em solid #d10074;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */

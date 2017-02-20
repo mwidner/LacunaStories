@@ -10,3 +10,18 @@ h1 {
   text-transform: uppercase;
   color: #009fda;
 }
+
+div#name-and-slogan {
+  margin-top: 1.5em;
+  a {
+    border: .5em solid #fff;
+    background-color: white;
+    text-decoration: none;
+    padding: .3em .5em;
+  }
+  a:hover {
+    color: #d10074;
+    background: #f9e300;
+    border: .5em solid #d10074;
+  }
+}
