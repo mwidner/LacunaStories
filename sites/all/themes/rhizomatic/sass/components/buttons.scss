@@ -5,7 +5,8 @@ a.button {
   color: black;
 }
 
-span#page-turner-bookmark-button {
+span#page-turner-bookmark-button,
+span.dashboard-buttons a.dashboard-button {
   color: black;
   border: .5em solid #fff;
   background-color: white;
@@ -14,7 +15,8 @@ span#page-turner-bookmark-button {
   margin-right: .5em;
   text-transform: uppercase;
 }
-span#page-turner-bookmark-button:hover {
+span#page-turner-bookmark-button:hover,
+span.dashboard-buttons a.dashboard-button:hover {
   color: #d10074;
   background: #f9e300;
   border: .5em solid #d10074;

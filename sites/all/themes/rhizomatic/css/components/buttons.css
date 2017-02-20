@@ -6,8 +6,9 @@ a.button {
   color: black;
 }
 
-/* line 8, ../../sass/components/buttons.scss */
-span#page-turner-bookmark-button {
+/* line 9, ../../sass/components/buttons.scss */
+span#page-turner-bookmark-button,
+span.dashboard-buttons a.dashboard-button {
   color: black;
   border: .5em solid #fff;
   background-color: white;
@@ -17,8 +18,9 @@ span#page-turner-bookmark-button {
   text-transform: uppercase;
 }
 
-/* line 17, ../../sass/components/buttons.scss */
-span#page-turner-bookmark-button:hover {
+/* line 19, ../../sass/components/buttons.scss */
+span#page-turner-bookmark-button:hover,
+span.dashboard-buttons a.dashboard-button:hover {
   color: #d10074;
   background: #f9e300;
   border: .5em solid #d10074;
