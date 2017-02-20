@@ -7,3 +7,9 @@ body header#header {
   background: url(../images/header.png) no-repeat;
   height: 150px;
 }
+
+/* line 9, ../../sass/components/base.scss */
+h1 {
+  text-transform: uppercase;
+  color: #009fda;
+}

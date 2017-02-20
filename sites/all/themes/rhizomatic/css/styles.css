@@ -3155,6 +3155,12 @@ body header#header {
   height: 150px;
 }
 
+/* line 9, ../sass/components/base.scss */
+h1 {
+  text-transform: uppercase;
+  color: #009fda;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
