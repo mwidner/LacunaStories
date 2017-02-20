@@ -23,11 +23,8 @@ function lacuna_stories_people_field_group_info() {
     'label' => 'Biographical',
     'weight' => '3',
     'children' => array(
-      0 => 'field_about_me',
-      1 => 'field_date_of_birth',
-      2 => 'field_display_name',
-      3 => 'field_gender',
-      4 => 'picture',
+      0 => 'field_display_name',
+      1 => 'picture',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -42,7 +39,7 @@ function lacuna_stories_people_field_group_info() {
   $field_groups['group_biographical|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_education|user|user|form';
   $field_group->group_name = 'group_education';
@@ -73,7 +70,7 @@ function lacuna_stories_people_field_group_info() {
   $field_groups['group_education|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_learning|user|user|form';
   $field_group->group_name = 'group_learning';
