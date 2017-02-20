@@ -368,7 +368,7 @@ function media_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
   // Add a validation function to any field instance which uses the media widget
   // to ensure that the upload destination scheme is one of the allowed schemes
   // if any defined by settings.
-  if ($form['instance']['widget']['type']['#value'] == 'media_generic' && isset($form['#field']['settings']['uri_scheme'])) {
+  if (isset($form['instance']['widget']) && $form['instance']['widget']['type']['#value'] == 'media_generic' && isset($form['#field']['settings']['uri_scheme'])) {
     $form['#validate'][] = 'media_field_instance_validate';
   }
 }
@@ -674,7 +674,7 @@ function media_element_info() {
     '#value_callback' => 'media_file_value',
     '#element_validate' => array('media_element_validate'),
     '#pre_render' => array('media_element_pre_render'),
-    '#theme' => 'media_element',
+    '#theme' => 'media_widget',
     '#theme_wrappers' => array('form_element'),
     '#size' => 22,
     '#extended' => FALSE,
