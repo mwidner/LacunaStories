@@ -17,9 +17,6 @@ function lacuna_stories_peer_groups_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_group_description',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -39,9 +36,6 @@ function lacuna_stories_peer_groups_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'og_user_node1',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',

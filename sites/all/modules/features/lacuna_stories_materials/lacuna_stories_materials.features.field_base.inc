@@ -17,9 +17,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_bibliographic_entry',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -55,9 +52,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_copyright',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -110,9 +104,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_doc_text',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -132,9 +123,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_image',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -157,9 +145,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_media',
-    'field_permissions' => array(
-      'type' => 2,
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -183,9 +168,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_medium',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -212,9 +194,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_priority',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -241,9 +220,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_status',
-    'field_permissions' => array(
-      'type' => 2,
-    ),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -292,9 +268,6 @@ function lacuna_stories_materials_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_unit',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',

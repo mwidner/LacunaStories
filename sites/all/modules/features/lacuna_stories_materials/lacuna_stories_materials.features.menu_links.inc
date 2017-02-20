@@ -18,6 +18,9 @@ function lacuna_stories_materials_menu_default_menu_links() {
     'link_title' => 'Materials',
     'options' => array(
       'identifier' => 'main-menu_materials:materials',
+      'attributes' => array(
+        'title' => '',
+      ),
     ),
     'module' => 'system',
     'hidden' => 0,
@@ -26,7 +29,6 @@ function lacuna_stories_materials_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_explore:<nolink>',
   );
 
   // Translatables

@@ -260,7 +260,7 @@ function lacuna_stories_annotations_field_default_field_instances() {
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_plain',
+        'type' => 'text_default',
         'weight' => 0,
       ),
       'teaser' => array(

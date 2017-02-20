@@ -17,9 +17,6 @@ function lacuna_stories_annotations_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_annotation_audience',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -73,9 +70,6 @@ function lacuna_stories_annotations_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_annotation_ins_viewable_co',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -132,9 +126,6 @@ function lacuna_stories_annotations_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_annotation_ranges',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',

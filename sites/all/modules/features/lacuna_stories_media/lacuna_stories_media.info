@@ -6,7 +6,6 @@ version = 7.x-2.0
 project = lacuna_stories_media
 dependencies[] = ctools
 dependencies[] = features
-dependencies[] = field_permissions
 dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = media

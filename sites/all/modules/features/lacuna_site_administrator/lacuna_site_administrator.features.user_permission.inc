@@ -73,15 +73,6 @@ function lacuna_site_administrator_user_default_permissions() {
     'module' => 'dashboard',
   );
 
-  // Exported permission: 'access private fields'.
-  $permissions['access private fields'] = array(
-    'name' => 'access private fields',
-    'roles' => array(
-      'Site Administrator' => 'Site Administrator',
-    ),
-    'module' => 'field_permissions',
-  );
-
   // Exported permission: 'access rules debug'.
   $permissions['access rules debug'] = array(
     'name' => 'access rules debug',
@@ -179,15 +170,6 @@ function lacuna_site_administrator_user_default_permissions() {
       'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'features',
-  );
-
-  // Exported permission: 'administer field permissions'.
-  $permissions['administer field permissions'] = array(
-    'name' => 'administer field permissions',
-    'roles' => array(
-      'Site Administrator' => 'Site Administrator',
-    ),
-    'module' => 'field_permissions',
   );
 
   // Exported permission: 'administer fieldgroups'.
@@ -387,15 +369,6 @@ function lacuna_site_administrator_user_default_permissions() {
       'Site Administrator' => 'Site Administrator',
     ),
     'module' => 'honeypot',
-  );
-
-  // Exported permission: 'bypass maxlength'.
-  $permissions['bypass maxlength'] = array(
-    'name' => 'bypass maxlength',
-    'roles' => array(
-      'Site Administrator' => 'Site Administrator',
-    ),
-    'module' => 'maxlength',
   );
 
   // Exported permission: 'bypass rules access'.
