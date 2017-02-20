@@ -23,11 +23,11 @@ function lacuna_stories_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_account:<nolink>',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -42,
     'customized' => 1,
   );
   // Exported menu link: main-menu_connect:<nolink>.
@@ -47,7 +47,7 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: main-menu_create:<nolink>.
@@ -63,11 +63,11 @@ function lacuna_stories_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_create:<nolink>',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: main-menu_explore:<nolink>.
@@ -83,9 +83,9 @@ function lacuna_stories_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_explore:<nolink>',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
@@ -107,7 +107,7 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -40,
     'customized' => 1,
   );
   // Exported menu link: main-menu_reflect:<nolink>.
@@ -123,11 +123,11 @@ function lacuna_stories_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_reflect:<nolink>',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: menu-institutional-menu_about:http://www.lacunastories.com.
