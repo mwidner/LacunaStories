@@ -13,7 +13,7 @@ class FiltersAnnotatorPlugin extends AnnotatorPlugin {
     global $user;
     $default = array();
     $default['current_user'] = format_username($user); // current logged in user
-    $default['filters'] = array('tags', 'category', 'user');
+    $default['filters'] = array('tags', 'user');
     return parent::settings($default);
   }
 
