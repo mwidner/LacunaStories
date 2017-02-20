@@ -1,9 +1,18 @@
-ul.menu {
-  a, span {
-    border: none;
+ul.sf-menu {
+  float: right;
+  text-transform: uppercase;
+  font-family: "uniformbold",Arial,Helvetica Neue,Helvetica,sans-serif;
+  li a, li span {
+    color: black;
+    border: .5em solid #fff;
     background-color: white;
     text-decoration: none;
+    padding: .5em .7em;
+    margin-right: .5em;
+  }
+  li a:hover, li span:hover {
+    color: #d10074;
+    background: #f9e300;
+    border: .5em solid #d10074;
   }
 }
-
-//.sf-menu.sf-style-white a, .sf-menu.sf-style-white span.nolink

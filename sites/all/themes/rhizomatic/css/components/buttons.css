@@ -5,3 +5,21 @@ a.button {
   padding: 5px;
   color: black;
 }
+
+/* line 8, ../../sass/components/buttons.scss */
+span#page-turner-bookmark-button {
+  color: black;
+  border: .5em solid #fff;
+  background-color: white;
+  text-decoration: none;
+  padding: .5em .7em;
+  margin-right: .5em;
+  text-transform: uppercase;
+}
+
+/* line 17, ../../sass/components/buttons.scss */
+span#page-turner-bookmark-button:hover {
+  color: #d10074;
+  background: #f9e300;
+  border: .5em solid #d10074;
+}

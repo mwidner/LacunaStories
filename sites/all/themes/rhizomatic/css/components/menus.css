@@ -1,6 +1,21 @@
-/* line 2, ../../sass/components/menus.scss */
-ul.menu a, ul.menu span {
-  border: none;
+/* line 1, ../../sass/components/menus.scss */
+ul.sf-menu {
+  float: right;
+  text-transform: uppercase;
+  font-family: "uniformbold",Arial,Helvetica Neue,Helvetica,sans-serif;
+}
+/* line 5, ../../sass/components/menus.scss */
+ul.sf-menu li a, ul.sf-menu li span {
+  color: black;
+  border: .5em solid #fff;
   background-color: white;
   text-decoration: none;
+  padding: .5em .7em;
+  margin-right: .5em;
+}
+/* line 13, ../../sass/components/menus.scss */
+ul.sf-menu li a:hover, ul.sf-menu li span:hover {
+  color: #d10074;
+  background: #f9e300;
+  border: .5em solid #d10074;
 }

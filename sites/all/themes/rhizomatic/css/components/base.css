@@ -1,0 +1,9 @@
+/* line 1, ../../sass/components/base.scss */
+body {
+  background: #f5f5f5;
+}
+/* line 2, ../../sass/components/base.scss */
+body header#header {
+  background: url(../images/header.png) no-repeat;
+  height: 150px;
+}
