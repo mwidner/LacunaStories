@@ -3156,25 +3156,39 @@ body header#header {
   background: url(../images/header.png) no-repeat;
   height: 150px;
 }
+/* line 8, ../sass/components/base.scss */
+body div.field-name-field-doc-text {
+  background: white;
+  padding-top: .2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: .5em;
+  box-shadow: -4px 4px 10px 0px black;
+}
 
-/* line 9, ../sass/components/base.scss */
+/* line 18, ../sass/components/base.scss */
+div#annotation-filter-wrapper {
+  background: white;
+}
+
+/* line 22, ../sass/components/base.scss */
 h1 {
   text-transform: uppercase;
   color: #009fda;
 }
 
-/* line 14, ../sass/components/base.scss */
+/* line 27, ../sass/components/base.scss */
 div#name-and-slogan {
   margin-top: 1.5em;
 }
-/* line 16, ../sass/components/base.scss */
+/* line 29, ../sass/components/base.scss */
 div#name-and-slogan a {
   border: .5em solid #fff;
   background-color: white;
   text-decoration: none;
   padding: .3em .5em;
 }
-/* line 22, ../sass/components/base.scss */
+/* line 35, ../sass/components/base.scss */
 div#name-and-slogan a:hover {
   color: #d10074;
   background: #f9e300;
